@@ -1,0 +1,8 @@
+/* pages/firstFail/firstFail.wxss */
+@import '../success/success.wxss';
+.point{
+  width: 100%;
+  text-align: center;
+  color:#999999;
+  font-size: 14px;
+}

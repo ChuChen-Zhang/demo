@@ -1,0 +1,11 @@
+<!--firstFail.wxml-->
+<view class="container">
+  <view class="group">
+    <icon type="cancel" size="85"/>
+  </view>
+  <view class="text">提交失败</view>
+  <view class="point">身份信息核验失败，请重试，或联系技术支持</view>
+  <view class="loginBtnView">  
+      <button  bindtap='target' class="loginBtn" size="{{primarySize}}">重 新 登 记</button>  
+    </view> 
+</view>

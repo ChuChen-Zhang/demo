@@ -1,0 +1,10 @@
+<!--lastFail.wxml-->
+<view class="container">
+  <view class="group">
+    <icon type="warn" size="85"/>
+  </view>
+  <view class="text">身份信息不一致</view>
+  <view class="loginBtnView">
+      <button  bindtap='target' class="loginBtn" size="{{primarySize}}">重 新 登 记</button>
+    </view>
+</view>

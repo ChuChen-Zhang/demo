@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container"> 
+  <view class="login-icon">  
+    <image mode='aspectFit' class="login-img" src="../../image/logo.png"></image>  
+  </view>  
+  <view class='mini_name'>人人参与  携手防疫</view>
+  <view class="login-from">  
+  <form bindsubmit="formSubmit" class='form'>
+    <view class="myno">
+    <!-- 学号 -->
+      <view class="weui-cell weui-cell_input">
+      <image class="nameImage" src="../../image/name.png"></image>
+          <!-- <view class="weui-cell__hd">
+              <view class="weui-label">学号</view>
+          </view> -->
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="text" name="no" bindinput="noinput" value='{{no}}' placeholder="请输入用户名" />
+          </view>
+      </view>
+    </view>
+    <view class="mypwd">
+      <!-- 密码 -->
+      <view class="weui-cell weui-cell_input">
+      <image class="nameImage" src="../../image/key.png"></image>
+          <!-- <view class="weui-cell__hd">
+              <view class="weui-label">密码</view>
+          </view> -->
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="password" name="pwd" bindinput="pwdinput" placeholder="请输入密码" value='{{pwd}}'/>
+          </view>
+      </view>
+    </view>
+ 
+     <!--按钮-->  
+    <view class="loginBtnView">  
+      <button class="loginBtn" size="{{primarySize}}"  form-type='submit' disabled='{{disabled}}'>登 录</button>  
+    </view>  
+    </form>
+    <view class="footer_text">Copyright©2020</view> 
+  </view>  
+</view>

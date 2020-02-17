@@ -1,0 +1,10 @@
+<!--success.wxml-->
+<view class="container">
+  <view class="group">
+    <icon type="success" size="85"/>
+  </view>
+  <view class="text">身份信息有效</view>
+  <view class="loginBtnView">  
+      <button  bindtap='target' class="loginBtn" size="{{primarySize}}">继 续 登 记</button>  
+    </view> 
+</view>

@@ -1,0 +1,87 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+ 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;    
+} 
+ 
+/*登录图片*/
+.login-icon{
+  margin: 0 auto;
+  margin-top: 60rpx;
+}
+.login-img{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 55rpx;
+}
+.mini_name{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #676767;
+}
+/*表单内容*/
+.login-from {
+  margin-top: 60rpx;
+  flex: auto;
+  height:100%;
+}
+ 
+/* 输入框 */
+.myno{
+  width: 80%;
+  height: 80rpx;
+  margin: 0 auto;
+  border-bottom:2px solid #eee;
+ 
+}
+.mypwd{
+  width: 80%;
+  height: 80rpx;
+  margin: 0 auto;
+  border-bottom:2px solid #eee;
+  margin-top: 40rpx;
+}
+/*按钮*/
+.loginBtnView {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+ 
+.loginBtn {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 100rpx;
+  color: #fff;
+  background-color:#3C53A3;
+  border: 0.1rpx solid #ccc;
+  border-radius: 10rpx;
+}
+.nameImage, .keyImage {
+  margin-right: 10px;
+  width: 40rpx;
+  height: 40rpx
+}
+.footer_text{
+  width: 100%;
+  color:#999;
+  text-align: center;
+  position: fixed;
+  bottom:100rpx;
+  left:0;
+  font-size: 12px;
+}
+
+
+
+

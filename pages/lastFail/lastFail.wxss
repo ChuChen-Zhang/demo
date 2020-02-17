@@ -1,0 +1,2 @@
+/* pages/lastFail/lastFail.wxss */
+@import '../success/success.wxss';

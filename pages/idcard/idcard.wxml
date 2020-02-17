@@ -1,0 +1,20 @@
+<!--idcard.wxml-->
+<view class="container">
+<!-- <view class="" wx:if="{{noauthor}}">
+  <view class="image_point">请上传被登记人员的身份证照片</view>
+  <view class="title_text">1.拍照时请确保身份证边框完整、图像清晰、光线均匀</view>
+  <view class="title_text">2.请确保身份证在有效期内</view>
+  <view class="bg_content">
+    <view class="bg_image" bindtap='choosefrontImg'>
+      <image class="bgimg_size" mode="aspectFit" src='{{frontimgsrc}}'></image>
+    </view>
+     <view class="bg_image" bindtap='choosebackImg'>
+      <image class="bgimg_size" mode="aspectFit" src='{{backimgsrc}}'></image>
+    </view> -->
+  <!-- </view> -->
+  <!--按钮-->
+  <!-- <view class="image_submit">  
+    <button class="loginBtn" bindtap='submit' size="{{primarySize}}" disabled='{{disabled}}'>提 交</button>  
+  </view>   -->
+  <web-view src="{{webUrl}}"></web-view>
+</view>

@@ -1,0 +1,129 @@
+<!--face.wxml-->
+<view class="container">
+  <view class="text-from">
+    <form bindsubmit="formSubmit" class='form'>
+    <view class="text_input">
+    <!-- 所在区： -->
+      <view class="icon_parent weui-cell weui-cell_input {{ (addrLevel_1_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="icon_image" bindtap='bindlocaltionView'>
+          <image mode="aspectFit" src='../../image/check.png'></image>
+        </view>
+        <view class="weui-cell__hd">
+            <view class="weui-label flex">
+              <view class="text_red mr_3">*</view>
+              <view>所在区：</view>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-input text_right pr_20" wx:if="{{localtionView}}" bindtap='bindlocaltionView'>{{addrLevel_1}}</view>
+            <picker class="weui-input text_right pr_20" wx:if="{{localtionPicker}}" bindchange="bindlocaltionPicker" value="{{localtionIndex}}" range="{{addr1_array}}">{{addrLevel_1}}</picker>
+            <input class="weui-input text_right pr_20" wx:if="{{localtionInput}}" focus='{{autoFocus}}' type="text"  bindinput="addrLevel_oneinput" name="addrLevel_1" value='{{addrLevel_1}}' placeholder="如：大兴区" />
+        </view>
+      </view>
+    </view>
+
+    <view class="text_input">
+    <!-- 当前位置 -->
+      <view class="icon_parent weui-cell weui-cell_input {{ (addrLevel_2_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="icon_image" bindtap='bindcurrentView'>
+          <image mode="aspectFit" src='../../image/check.png'></image>
+        </view>
+        <view class="weui-cell__hd">
+            <view class="weui-label flex">
+              <view class="text_red mr_3">*</view>
+              <view>当前位置：</view>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+        <view class="weui-input text_right pr_20" wx:if="{{currentView}}" bindtap='bindcurrentView'>{{addrLevel_2}}</view>
+            <picker class="weui-input text_right pr_20" wx:if="{{currentPicker}}" bindchange="bindcurrentPicker" value="{{currentInex}}" range="{{addr2_array}}">{{addrLevel_2}}</picker>
+            <input class="weui-input text_right pr_20" wx:if="{{currentInput}}" type="text"  bindinput="addrLevel_twoinput" name="addrLevel_2" value='{{addrLevel_2}}' placeholder="如：京东大厦" />
+        </view>
+      </view>
+    </view>
+
+    <view class="text_input">
+    <!-- 姓名 -->
+      <view class="icon_parent weui-cell weui-cell_input {{ (name_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="icon_image" bindtap='idcardTarget'>
+          <image mode="aspectFit" src='../../image/camera.png'></image>
+        </view>
+        <view class="weui-cell__hd">
+            <view class="weui-label flex">
+              <view class="text_red mr_3">*</view>
+              <view>姓名：</view>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input text_right pr_20" type="text"  bindinput="blurnameinput" name="name" value='{{name}}' placeholder="请输入姓名或拍照识别" />
+        </view>
+      </view>
+    </view>
+
+    <view class="text_input">
+    <!-- 证件号 -->
+      <view class="weui-cell weui-cell_input {{ (idcard_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="weui-cell__hd">
+            <view class="weui-label flex">
+              <view class="text_red mr_3">*</view>
+              <view>证件号：</view>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input text_right" type="text"  bindinput="bluridcardinput" name="idcard" value='{{idcard}}' placeholder="请输入证件号" />
+        </view>
+      </view>
+    </view>
+
+    <view class="text_input">
+    <!-- 联系电话 -->
+      <view class="weui-cell weui-cell_input {{ (phone_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="weui-label flex">
+          <view class="text_red mr_9"></view>
+          <view>联系电话：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input text_right" type="text"  bindinput="blurphoneinput" name="phone" value='{{phone}}' placeholder="请输入联系电话" />
+        </view>
+      </view>
+    </view>
+    <view class="text_input">
+    <!-- 详细地址 -->
+      <view class="weui-cell weui-cell_input {{ (addrLevel_3_focus == true) ? 'weui-cell_warn' : ''}}">
+        <view class="weui-label flex">
+          <view class="text_red mr_9"></view>
+          <view>详细地址：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input text_right" type="text"  bindinput="addrLevel_threeinput" name="addrLevel_3" value='{{addrLevel_3}}' placeholder="请精确到门牌号" />
+        </view>
+      </view>
+    </view>
+    <!-- <view class="weui-cells__title">
+      <view class="weui-label flex weui-label_else">
+        <view class="text_red mr_3">*</view>
+        <view>现场人像照片：</view>
+      </view>
+    </view>
+    <view class="bg_image">
+      <image bindtap='chooseImg' class="bgimg_size" mode="aspectFit" src='{{imgsrc}}'></image>
+    </view> -->
+    <view class="weui-cells__title">备注：</view>
+    <view class="weui-cells weui-cells_after-title yd_box">
+        <view class="weui-cell {{ (text_focus == true) ? 'weui-cell_warn' : ''}}">
+            <view class="weui-cell__bd">
+              <input name='desc' type="text" bindinput="bindWordLimit" class="desc_textarea" placeholder="请输入备注说明" style="" value="{{desc}}"></input>
+              <!-- <textarea name='desc' bindblur="js_miniproblur" bindinput="bindWordLimit" class="weui-textarea desc_textarea" placeholder="请输入备注说明" style="height: 3.3em" value="{{desc}}"/> -->
+              <view id="js_textcount" class="weui-textarea-counter">{{currentNoteLen|0}}/140</view>
+          </view>
+        </view>
+    </view>
+     <!--按钮-->
+    <view class="loginBtnView">  
+      <button class="loginBtn" size="{{primarySize}}"  form-type='submit' disabled='{{disabled}}'>提 交</button>  
+    </view>  
+    </form>
+    
+  </view> 
+  <view class="footer_text_else">Copyright©2020</view>
+</view>

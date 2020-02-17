@@ -1,0 +1,31 @@
+/**success.wxss**/
+.text{
+  font-size: 18px;
+  font-weight: 500;
+  color:#000000;
+  margin-top: 36rpx;
+  text-align: center;
+  width:100%;
+}
+.group{
+  margin-top: 200rpx;
+  text-align: center;
+  width:100%;
+  padding:0;
+  font-size: 0;
+}
+.loginBtnView {
+  margin-top: 100rpx;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+ 
+.loginBtn {
+  width: 60%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color:#3C53A3;
+  /* border: 0.1rpx solid #ccc; */
+  border-radius: 10rpx;
+}

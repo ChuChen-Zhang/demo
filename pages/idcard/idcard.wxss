@@ -1,0 +1,58 @@
+/**idcard.wxss**/
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+.image_point{
+  color:rgba(0, 0, 0, 0.9);
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 16px;
+}
+.title_text{
+  font-size: 14px;
+  color: rgba(178, 178, 178, 1);
+}
+.bg_image{
+  width: 100%;
+  height:360rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+.bgimg_size{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:360rpx;
+}
+.image_submit{
+  width:100%;
+  margin-top: 60rpx;
+}
+.text_entry{
+  color:#666666;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline;
+  position: fixed;
+  bottom:120rpx;
+  left:0;
+}
+.text_entry:hover{
+  color:#333333;
+}
+.loginBtn {
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color:#3C53A3;
+  /* border: 0.1rpx solid #ccc; */
+  border-radius: 10rpx;
+}
+
+
+
+

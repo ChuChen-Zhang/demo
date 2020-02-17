@@ -1,0 +1,10 @@
+<!--pages/invalid/invalid.wxml-->
+<view class="container">
+  <view class="group">
+    <icon type="info" size="85"/>
+  </view>
+  <view class="text">未知</view>
+  <view class="loginBtnView">  
+      <button  bindtap='target' class="loginBtn" size="{{primarySize}}">继 续 登 记</button>  
+    </view> 
+</view>

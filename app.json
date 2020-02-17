@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/face/face",
+    "pages/success/success",
+    "pages/firstFail/firstFail",
+    "pages/lastFail/lastFail",
+    "pages/invalid/invalid",
+    "pages/confirm/confirm",
+    "pages/idcard/idcard",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3C53A3",
+    "backgroundColor": "3C53A3",
+    "navigationBarTitleText": "众防",
+    "navigationBarTextStyle": "white"
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"位置信息用于统计数据"
+    }
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}
