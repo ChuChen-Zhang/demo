@@ -36,7 +36,8 @@ Page({
     addr1_array: [],
     addr2_array: [],
     localtionIndex: 0,
-    currentInex : 0
+    currentInex : 0,
+    currentInexTwo: 0
   },
   //所在区
   bindlocaltionPicker: function (e) {
